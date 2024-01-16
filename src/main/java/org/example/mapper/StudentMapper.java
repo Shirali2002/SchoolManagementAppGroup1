@@ -11,6 +11,14 @@ import java.util.List;
 
 public class StudentMapper {
 
+    private static final StudentMapper INSTANCE = new StudentMapper();
+
+    private StudentMapper() {}
+
+    public static StudentMapper getInstance() {
+        return INSTANCE;
+    }
+
     public Student toStudent(AddStudentRequest addStudentRequest) {
         Student student = new Student();
         student.setName(addStudentRequest.getName());
