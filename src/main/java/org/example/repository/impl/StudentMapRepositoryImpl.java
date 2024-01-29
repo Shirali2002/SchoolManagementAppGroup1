@@ -8,14 +8,14 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-public class StudentRepositoryImpl implements StudentRepository {
+public class StudentMapRepositoryImpl implements StudentRepository {
 
-    private static final StudentRepositoryImpl INSTANCE = new StudentRepositoryImpl();
+    private static final StudentMapRepositoryImpl INSTANCE = new StudentMapRepositoryImpl();
     private static final Map<Long, Student> students = new HashMap<>(); // our database for student
 
-    private StudentRepositoryImpl() {}
+    private StudentMapRepositoryImpl() {}
 
-    public static StudentRepositoryImpl getInstance() {
+    public static StudentMapRepositoryImpl getInstance() {
         return INSTANCE;
     }
 

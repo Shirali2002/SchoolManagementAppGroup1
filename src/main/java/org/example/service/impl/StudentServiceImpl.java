@@ -5,7 +5,8 @@ import org.example.dto.response.GetStudentResponse;
 import org.example.entity.Student;
 import org.example.mapper.StudentMapper;
 import org.example.repository.StudentRepository;
-import org.example.repository.impl.StudentRepositoryImpl;
+import org.example.repository.impl.StudentMapRepositoryImpl;
+import org.example.repository.impl.StudentMysqlRepositoryImpl;
 import org.example.service.StudentService;
 import org.example.util.IdGeneratorUtil;
 
@@ -14,7 +15,8 @@ import java.util.List;
 public class StudentServiceImpl implements StudentService {
 
     private static final StudentServiceImpl INSTANCE = new StudentServiceImpl();
-    private final StudentRepository studentRepository = StudentRepositoryImpl.getInstance();
+    private final StudentRepository studentRepository = StudentMysqlRepositoryImpl.getInstance();
+//    private final StudentRepository studentRepository = StudentMapRepositoryImpl.getInstance();
     private final StudentMapper studentMapper = StudentMapper.getInstance();
 
     private StudentServiceImpl() {}
@@ -27,7 +29,7 @@ public class StudentServiceImpl implements StudentService {
         Student student = studentMapper.toStudent(request);
         student.setId(IdGeneratorUtil.getNewStudentId());
 
-        StudentRepositoryImpl.getInstance().addStudent(student);
+        studentRepository.addStudent(student);
     }
 
     public List<GetStudentResponse> getAllStudents() {
