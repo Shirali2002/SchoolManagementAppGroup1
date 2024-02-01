@@ -1,14 +1,13 @@
-package org.example.service.impl;
+package org.example.student.service.impl;
 
-import org.example.dto.request.AddStudentRequest;
-import org.example.dto.response.GetStudentResponse;
-import org.example.entity.Student;
-import org.example.mapper.StudentMapper;
-import org.example.repository.StudentRepository;
-import org.example.repository.impl.StudentMapRepositoryImpl;
-import org.example.repository.impl.StudentMysqlRepositoryImpl;
-import org.example.service.StudentService;
-import org.example.util.IdGeneratorUtil;
+import org.example.student.dto.request.AddStudentRequest;
+import org.example.student.dto.response.GetStudentResponse;
+import org.example.student.entity.Student;
+import org.example.student.mapper.StudentMapper;
+import org.example.student.repository.StudentRepository;
+import org.example.student.repository.impl.StudentMysqlRepositoryImpl;
+import org.example.student.service.StudentService;
+import org.example.student.util.IdGeneratorUtil;
 
 import java.util.List;
 

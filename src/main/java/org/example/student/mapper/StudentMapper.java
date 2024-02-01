@@ -1,10 +1,9 @@
-package org.example.mapper;
+package org.example.student.mapper;
 
-import org.example.dto.request.AddStudentRequest;
-import org.example.dto.response.GetStudentResponse;
-import org.example.entity.Student;
-import org.example.util.DateUtil;
-import org.example.util.IdGeneratorUtil;
+import org.example.student.dto.request.AddStudentRequest;
+import org.example.student.dto.response.GetStudentResponse;
+import org.example.student.entity.Student;
+import org.example.student.util.DateUtil;
 
 import java.util.ArrayList;
 import java.util.List;

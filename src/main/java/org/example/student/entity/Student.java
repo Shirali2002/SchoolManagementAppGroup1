@@ -1,6 +1,5 @@
-package org.example.entity;
+package org.example.student.entity;
 
-import java.util.Map;
 import java.util.Objects;
 
 public class Student extends Human {

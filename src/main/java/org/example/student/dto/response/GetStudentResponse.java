@@ -1,13 +1,21 @@
-package org.example.entity;
+package org.example.student.dto.response;
 
-import java.time.LocalDate;
 import java.util.Objects;
 
-public abstract class Human {
+public class GetStudentResponse {
 
+    private Long id;
     private String name;
     private String surname;
-    private LocalDate birthDate;
+    private String birthDate;
+
+    public Long getId() {
+        return id;
+    }
+
+    public void setId(Long id) {
+        this.id = id;
+    }
 
     public String getName() {
         return name;
@@ -25,11 +33,11 @@ public abstract class Human {
         this.surname = surname;
     }
 
-    public LocalDate getBirthDate() {
+    public String getBirthDate() {
         return birthDate;
     }
 
-    public void setBirthDate(LocalDate birthDate) {
+    public void setBirthDate(String birthDate) {
         this.birthDate = birthDate;
     }
 
@@ -37,20 +45,19 @@ public abstract class Human {
     public boolean equals(Object o) {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
-        Human human = (Human) o;
-        return Objects.equals(name, human.name) && Objects.equals(surname, human.surname) && Objects.equals(birthDate, human.birthDate);
+        GetStudentResponse that = (GetStudentResponse) o;
+        return Objects.equals(id, that.id) && Objects.equals(name, that.name) && Objects.equals(surname, that.surname) && Objects.equals(birthDate, that.birthDate);
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(name, surname, birthDate);
+        return Objects.hash(id, name, surname, birthDate);
     }
 
     @Override
     public String toString() {
-        return "name='" + name + '\'' +
+        return id + ". name='" + name + '\'' +
                 ", surname='" + surname + '\'' +
-                ", birthDate=" + birthDate;
+                ", birthDate='" + birthDate + '\'';
     }
-
 }

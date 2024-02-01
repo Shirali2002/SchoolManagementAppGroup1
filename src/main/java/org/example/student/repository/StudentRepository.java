@@ -1,6 +1,6 @@
-package org.example.repository;
+package org.example.student.repository;
 
-import org.example.entity.Student;
+import org.example.student.entity.Student;
 
 import java.util.List;
 

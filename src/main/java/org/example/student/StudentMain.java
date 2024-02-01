@@ -1,15 +1,14 @@
-package org.example;
+package org.example.student;
 
-import org.example.controller.StudentController;
-import org.example.dto.request.AddStudentRequest;
-import org.example.dto.response.GetStudentResponse;
-import org.example.entity.Student;
-import org.example.util.RequestBuilderUtil;
+import org.example.student.controller.StudentController;
+import org.example.student.dto.request.AddStudentRequest;
+import org.example.student.dto.response.GetStudentResponse;
+import org.example.student.util.RequestBuilderUtil;
 
 import java.util.List;
 import java.util.Scanner;
 
-public class Main {
+public class StudentMain {
 
     private static final StudentController studentController = StudentController.getInstance();
 

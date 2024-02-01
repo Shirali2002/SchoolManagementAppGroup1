@@ -1,6 +1,6 @@
-package org.example.util;
+package org.example.student.util;
 
-import org.example.dto.request.AddStudentRequest;
+import org.example.student.dto.request.AddStudentRequest;
 
 import java.util.Scanner;
 

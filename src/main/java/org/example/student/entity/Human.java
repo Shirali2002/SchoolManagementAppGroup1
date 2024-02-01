@@ -1,12 +1,13 @@
-package org.example.dto.request;
+package org.example.student.entity;
 
+import java.time.LocalDate;
 import java.util.Objects;
 
-public class AddStudentRequest {
+public abstract class Human {
 
     private String name;
     private String surname;
-    private String birthDate;
+    private LocalDate birthDate;
 
     public String getName() {
         return name;
@@ -24,11 +25,11 @@ public class AddStudentRequest {
         this.surname = surname;
     }
 
-    public String getBirthDate() {
+    public LocalDate getBirthDate() {
         return birthDate;
     }
 
-    public void setBirthDate(String birthDate) {
+    public void setBirthDate(LocalDate birthDate) {
         this.birthDate = birthDate;
     }
 
@@ -36,8 +37,8 @@ public class AddStudentRequest {
     public boolean equals(Object o) {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
-        AddStudentRequest that = (AddStudentRequest) o;
-        return Objects.equals(name, that.name) && Objects.equals(surname, that.surname) && Objects.equals(birthDate, that.birthDate);
+        Human human = (Human) o;
+        return Objects.equals(name, human.name) && Objects.equals(surname, human.surname) && Objects.equals(birthDate, human.birthDate);
     }
 
     @Override
@@ -47,11 +48,9 @@ public class AddStudentRequest {
 
     @Override
     public String toString() {
-        return "AddStudentRequest{" +
-                "name='" + name + '\'' +
+        return "name='" + name + '\'' +
                 ", surname='" + surname + '\'' +
-                ", birthDate='" + birthDate + '\'' +
-                '}';
+                ", birthDate=" + birthDate;
     }
 
 }

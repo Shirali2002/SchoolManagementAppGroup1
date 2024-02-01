@@ -1,7 +1,7 @@
-package org.example.repository.impl;
+package org.example.student.repository.impl;
 
-import org.example.entity.Student;
-import org.example.repository.StudentRepository;
+import org.example.student.entity.Student;
+import org.example.student.repository.StudentRepository;
 
 import java.util.ArrayList;
 import java.util.HashMap;

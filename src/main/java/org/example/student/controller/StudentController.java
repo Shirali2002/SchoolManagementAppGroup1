@@ -1,9 +1,9 @@
-package org.example.controller;
+package org.example.student.controller;
 
-import org.example.dto.request.AddStudentRequest;
-import org.example.dto.response.GetStudentResponse;
-import org.example.service.StudentService;
-import org.example.service.impl.StudentServiceImpl;
+import org.example.student.dto.request.AddStudentRequest;
+import org.example.student.dto.response.GetStudentResponse;
+import org.example.student.service.StudentService;
+import org.example.student.service.impl.StudentServiceImpl;
 
 import java.util.List;
 

@@ -1,21 +1,12 @@
-package org.example.dto.response;
+package org.example.student.dto.request;
 
 import java.util.Objects;
 
-public class GetStudentResponse {
+public class AddStudentRequest {
 
-    private Long id;
     private String name;
     private String surname;
     private String birthDate;
-
-    public Long getId() {
-        return id;
-    }
-
-    public void setId(Long id) {
-        this.id = id;
-    }
 
     public String getName() {
         return name;
@@ -45,19 +36,22 @@ public class GetStudentResponse {
     public boolean equals(Object o) {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
-        GetStudentResponse that = (GetStudentResponse) o;
-        return Objects.equals(id, that.id) && Objects.equals(name, that.name) && Objects.equals(surname, that.surname) && Objects.equals(birthDate, that.birthDate);
+        AddStudentRequest that = (AddStudentRequest) o;
+        return Objects.equals(name, that.name) && Objects.equals(surname, that.surname) && Objects.equals(birthDate, that.birthDate);
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(id, name, surname, birthDate);
+        return Objects.hash(name, surname, birthDate);
     }
 
     @Override
     public String toString() {
-        return id + ". name='" + name + '\'' +
+        return "AddStudentRequest{" +
+                "name='" + name + '\'' +
                 ", surname='" + surname + '\'' +
-                ", birthDate='" + birthDate + '\'';
+                ", birthDate='" + birthDate + '\'' +
+                '}';
     }
+
 }

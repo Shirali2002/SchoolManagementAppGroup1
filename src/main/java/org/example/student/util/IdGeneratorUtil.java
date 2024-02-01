@@ -1,4 +1,4 @@
-package org.example.util;
+package org.example.student.util;
 
 public final class IdGeneratorUtil {
 

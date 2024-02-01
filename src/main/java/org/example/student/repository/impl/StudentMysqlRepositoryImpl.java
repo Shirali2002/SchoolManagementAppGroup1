@@ -1,8 +1,7 @@
-package org.example.repository.impl;
+package org.example.student.repository.impl;
 
-import com.mysql.cj.jdbc.ConnectionImpl;
-import org.example.entity.Student;
-import org.example.repository.StudentRepository;
+import org.example.student.entity.Student;
+import org.example.student.repository.StudentRepository;
 
 import java.sql.Connection;
 import java.sql.Date;
